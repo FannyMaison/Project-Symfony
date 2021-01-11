@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Hello !
+{% endblock %}
+{% block body %}
+    Hello <strong>{{ prenom }}</strong> !
+    <a href="{{ path('liste') }}">Lien vers "Liste"</a>
+{% endblock %}
