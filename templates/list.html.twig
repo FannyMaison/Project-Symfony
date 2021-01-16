@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Liste de prénoms
+{% endblock %}
+{% block body %}
+    <ul>
+        <li><strong>Prénoms :</strong></li>
+        {% for prenoms in list %}
+        <li><a href="{{ path('hello', {prenom : prenoms}) }}">{{ prenoms }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -44,4 +44,12 @@ class HelloWorldController extends \Symfony\Bundle\FrameworkBundle\Controller\Ab
         $formData = $request->request->get('name');
         return new Response("Merci $formData");
     }
+
+    function list():Response
+    {
+        $list = ['Bernard', 'Jean', 'Daniel', 'Patrick'];
+        return $this->render('list.html.twig', [
+            'list'=>$list
+        ]);
+    }
 }
